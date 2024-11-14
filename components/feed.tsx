@@ -5,6 +5,7 @@ import { Card } from '@/components/ui/card';
 import { Avatar } from '@/components/ui/avatar';
 import { Button } from '@/components/ui/button';
 import { Heart, MessageCircle, Share2, Bookmark } from 'lucide-react';
+import Image from 'next/image';
 
 export function Feed() {
   const [posts] = useState([
@@ -42,7 +43,8 @@ export function Feed() {
         <Card key={post.id} className="overflow-hidden">
           <div className="p-4 flex items-center space-x-3">
             <Avatar className="h-10 w-10">
-              <img
+              <Image
+                fill
                 src={post.user.avatar}
                 alt={post.user.name}
                 className="object-cover"
@@ -57,7 +59,8 @@ export function Feed() {
           </div>
 
           <div className="aspect-square relative">
-            <img
+            <Image
+              fill
               src={post.image}
               alt="Post"
               className="object-cover w-full h-full"
