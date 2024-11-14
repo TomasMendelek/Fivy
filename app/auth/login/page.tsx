@@ -6,7 +6,7 @@ import { useRouter } from "next/navigation";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Card, CardHeader, CardContent, CardFooter } from "@/components/ui/card";
-import { useToast } from "@/components/ui/use-toast";
+import { useToast } from "@/hooks/use-toast";
 
 export default function LoginPage() {
   const router = useRouter();
@@ -74,7 +74,7 @@ export default function LoginPage() {
               {isLoading ? "Signing in..." : "Sign in"}
             </Button>
             <p className="text-sm text-center text-muted-foreground">
-              Don't have an account?{" "}
+              Dont have an account?{" "}
               <Link
                 href="/auth/register"
                 className="text-primary underline-offset-4 hover:underline"

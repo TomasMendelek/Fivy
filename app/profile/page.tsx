@@ -4,7 +4,8 @@ import { Button } from '@/components/ui/button';
 import { Card } from '@/components/ui/card';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { Avatar } from '@/components/ui/avatar';
-import { Grid3X3, Settings, Image, Heart, MessageCircle } from 'lucide-react';
+import { Grid3X3, Settings, ImageIcon, Heart, MessageCircle } from 'lucide-react';
+import Image from 'next/image';
 
 export default function ProfilePage() {
   const posts = [
@@ -29,7 +30,8 @@ export default function ProfilePage() {
       <Card className="p-6 mb-6">
         <div className="flex flex-col md:flex-row items-center gap-6">
           <Avatar className="h-32 w-32">
-            <img
+            <Image
+              fill
               src="https://avatars.githubusercontent.com/u/143723168?v=4"
               alt="Profile"
               className="object-cover"
@@ -73,7 +75,7 @@ export default function ProfilePage() {
             Posts
           </TabsTrigger>
           <TabsTrigger value="saved">
-            <Image className="h-4 w-4 mr-2" />
+            <ImageIcon className="h-4 w-4 mr-2" />
             Saved
           </TabsTrigger>
         </TabsList>
@@ -84,7 +86,8 @@ export default function ProfilePage() {
                 key={post.id}
                 className="aspect-square relative group cursor-pointer"
               >
-                <img
+                <Image
+                fill
                   src={post.image}
                   alt="Post"
                   className="object-cover w-full h-full"

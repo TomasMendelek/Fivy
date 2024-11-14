@@ -5,8 +5,9 @@ import { useRouter } from "next/navigation";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Textarea } from "@/components/ui/textarea";
-import { useToast } from "@/components/ui/use-toast";
-import { Image, Upload } from "lucide-react";
+import { useToast } from "@/hooks/use-toast";
+import { ImageIcon, Upload } from "lucide-react";
+import Image from "next/image";
 
 export default function CreatePostPage() {
   const router = useRouter();
@@ -57,10 +58,11 @@ export default function CreatePostPage() {
           <div className="border-2 border-dashed rounded-lg p-6 text-center">
             {preview ? (
               <div className="relative aspect-square">
-                <img
+                <Image
                   src={preview}
                   alt="Preview"
                   className="object-cover w-full h-full rounded-lg"
+                  
                 />
                 <Button
                   type="button"
@@ -74,7 +76,9 @@ export default function CreatePostPage() {
             ) : (
               <div className="space-y-4">
                 <div className="flex justify-center">
-                  <Image className="h-12 w-12 text-muted-foreground" />
+                  <ImageIcon  
+                    className="h-12 w-12 text-muted-foreground"  
+                  />
                 </div>
                 <div>
                   <label htmlFor="image-upload" className="cursor-pointer">

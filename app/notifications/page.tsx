@@ -6,6 +6,7 @@ import { Avatar } from "@/components/ui/avatar";
 import { Button } from "@/components/ui/button";
 import { ScrollArea } from "@/components/ui/scroll-area";
 import { Heart, MessageCircle, UserPlus } from "lucide-react";
+import Image from "next/image";
 
 export default function NotificationsPage() {
   const [notifications] = useState([
@@ -67,7 +68,7 @@ export default function NotificationsPage() {
                   className="flex items-center space-x-4 p-4 rounded-lg hover:bg-accent"
                 >
                   <Avatar className="h-10 w-10">
-                    <img src={notification.user.avatar} alt={notification.user.name} />
+                    <Image fill src={notification.user.avatar} alt={notification.user.name} />
                   </Avatar>
                   <div className="flex-1 min-w-0">
                     <p className="text-sm">

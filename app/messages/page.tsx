@@ -7,6 +7,7 @@ import { ScrollArea } from '@/components/ui/scroll-area';
 import { Avatar } from '@/components/ui/avatar';
 import { Button } from '@/components/ui/button';
 import { Search, Send } from 'lucide-react';
+import Image from 'next/image';
 
 export default function MessagesPage() {
   const [conversations] = useState([
@@ -50,7 +51,8 @@ export default function MessagesPage() {
                   >
                     <div className="relative">
                       <Avatar className="h-10 w-10">
-                        <img
+                        <Image
+                          fill
                           src={conversation.user.avatar}
                           alt={conversation.user.name}
                         />
