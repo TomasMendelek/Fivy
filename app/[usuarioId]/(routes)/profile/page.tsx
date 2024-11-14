@@ -39,7 +39,7 @@ export default function ProfilePage() {
           </Avatar>
           <div className="flex-1 text-center md:text-left">
             <div className="flex flex-col md:flex-row md:items-center gap-4 mb-4">
-              <h1 className="text-2xl font-bold">TomasMende</h1>
+              <h1 className="text-2xl font-bold">TomasMendelek</h1>
               <div className="flex gap-2">
                 <Button>Edit Profile</Button>
                 <Button variant="outline" size="icon">
@@ -61,7 +61,7 @@ export default function ProfilePage() {
             <div>
               <p className="font-medium">@Mendelek</p>
               <p className="text-muted-foreground">
-                Photography enthusiast 📸 | Travel lover ✈️ | Coffee addict ☕
+                
               </p>
             </div>
           </div>
